@@ -1,4 +1,3 @@
-// var comp = random(90-120)
 var rand12 = function() {
     return Math.ceil(Math.random() * 12)
 };
@@ -32,11 +31,20 @@ var buttons = function() {
 
 $("#btn_area").on("click", ".btn-crystal", function() {
     var value = $(this).attr("value");
-    console.log(value);
     total += parseInt(value)
-    display()
+    if (total === targetNumber) {
+        wins++;
+        $(".Wins").text("wins: " + wins);
+        alert("You win!")
+    } else if (total > targetNumber) {
+        losses++;
+        $(".Losses").text("Losses: " + losses);
+        alert("You lose!");
+    }
+    display();
 })
+
+
 
 display();
 buttons();
-
