@@ -39,3 +39,4 @@ $("#btn_area").on("click", ".btn-crystal", function() {
 
 display();
 buttons();
+
