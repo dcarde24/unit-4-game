@@ -22,6 +22,7 @@ $("#UserNum").text(total)
 }
 
 var buttons = function() {
+    $("#btn_area").empty()
     for (i = 1; i <= 4; i++) {var newBtn = $("<button>")
     newBtn.addClass("btn btn-primary btn-lg btn-crystal")
     newBtn.attr("value", rand12())
@@ -35,16 +36,22 @@ $("#btn_area").on("click", ".btn-crystal", function() {
     if (total === targetNumber) {
         wins++;
         $(".Wins").text("wins: " + wins);
-        alert("You win!")
+        alert("You win!");
+        resetGame();
     } else if (total > targetNumber) {
         losses++;
         $(".Losses").text("Losses: " + losses);
         alert("You lose!");
+        resetGame();
     }
     display();
 })
 
-
+var resetGame = function() {
+        targetNumber = rand120();
+        total = 0;
+        buttons();
+}
 
 display();
 buttons();
