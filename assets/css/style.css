@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: linear-gradient(to right, blue, silver);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.jumbotron {
+    background-color: rgba(138, 138, 138, 0.863);
+    padding: 10px;
+}
+
+.display-4 {
+    font-family: 'Indie Flower', cursive;
+}
+
+.card-body {
+    background-color: rgba(138, 138, 138, 0.863);
+    font-size: 20px;
+}
+
+.btn-crystal {
+    margin: 20px;
+    background-color: black;
+}
